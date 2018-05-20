@@ -1,0 +1,24 @@
+Word editor with programming features
+examples
+
+if :has_looked_at object_id then
+   do
+	:setvalue camseq3 :load_sequence "X1bb_12_CamSeq3" # a sequence is a collection of characters, animations, dialguoe, subtitles, camera movements, events, scripts and prerendered cutscenes in a timeline file
+	:run_sequece camseq3
+   done
+
+else
+   do
+	SayDialogue "Dialogue3"
+	#SayDialogue will asynchronsly overwrite whatever dialogue (sound and subtitles) is currently running and instead display the selected file
+   done   
+end
+
+=========================
+
+Each script would be handed a reference of the world and would as such be free to change it. This is problematic for asynchrous scripts (fix).
+
+The above script would be included in a sequence file and would therefore the final result is a animation and writing studio with integrated scripting features.
+
+=========================
+

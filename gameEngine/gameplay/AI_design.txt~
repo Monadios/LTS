@@ -1,0 +1,16 @@
+AI should be based on "facts"
+
+
+facts in this context is a piece of data which the ai has in it's memory
+
+examples:
+	spotting a door left open
+	seeing the same person wearing different disguises
+	remembering faces
+
+
+Ai should also exhibit varying levels of awareness
+
+awareness determines both how fast ai picks up (stores) facts and how much attention is payed to facts (i.e how much they care)
+
+

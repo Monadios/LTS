@@ -1,0 +1,32 @@
+AI should be based on "facts" and a logical thinking system (LTS)
+
+facts in this context is a piece of data which the ai has in it's memory
+
+examples:
+	spotting a door left open
+	seeing the same person wearing different disguises
+	remembering faces
+
+
+this means that if you are spotted wearing one disguise and change, the AI will look for the other disguise.
+However if anyone saw your face, they would spot you easier than those who didn't
+
+Ai's also have "expectations" (i.e facts that they expect like a waiter not carrying a gun).
+
+Ai should also exhibit varying levels of awareness.
+
+awareness determines both how fast ai picks up (stores) facts and how
+much attention is payed to discrepancies between facts and expectations.
+
+AI have different states:
+   idle = everything is fine (awareness low)
+   suspicious = the facts that they observe don't match what they think should happen (awareness medium)
+   alerted = they figured out something is wrong based on facts (awareness high)
+
+
+Ai's have different senses.
+
+senses are input systems to the LTS.
+
+facts and expectations should perhaps be categorized by sense i.e
+sight expectation, auditory, etc.

@@ -1,0 +1,15 @@
+{
+    //these will be loaded at start
+    "resources" : {
+	"scripts": {"script1.rb", "script2.rb", ...},
+	"dialogues": {"dialogue1.dia", ...},
+	"seq_models": {"sceneX_models"},
+	...
+    }
+
+    "timeline": {
+	"sequence1",
+	"sequence2",
+	...
+    }
+}

@@ -1,9 +1,16 @@
 Word editor with programming features
+
+Sequences are collections of characters, animations, dialguoe, subtitles, camera movements, events, scripts and prerendered cutscenes in a timeline file. They are essentially clips that make up an entire scene.
+
+A scene is a collection of sequences in a larger timeline file.
+
+Sequences can also access the scene timeline to see how far into the whole scene it is.
+
 examples
 
 if :has_looked_at object_id then
    do
-	:setvalue camseq3 :load_sequence "X1bb_12_CamSeq3" # a sequence is a collection of characters, animations, dialguoe, subtitles, camera movements, events, scripts and prerendered cutscenes in a timeline file
+	:setvalue camseq3 :load_sequence "X1bb_12_CamSeq3" 
 	:run_sequece camseq3
    done
 
@@ -11,7 +18,15 @@ else
    do
 	SayDialogue "Dialogue3"
 	#SayDialogue will asynchronsly overwrite whatever dialogue (sound and subtitles) is currently running and instead display the selected file
-   done   
+
+	choice = DisplayChoice "Choice3"
+
+	#choices suspends any mouse input (or possibly loads a input configuration file) and plays a sequence, while displaying a user input dialogue and waiting for the answer.
+   	if :choice_is choice "choice_posibility1" then
+	   do
+		...
+	   done
+   done
 end
 
 =========================

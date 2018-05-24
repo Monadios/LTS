@@ -1,0 +1,10 @@
+#ifndef ENTITY_MANAGER_H
+#define ENTITY_MANAGER_H
+
+class EntityManager
+{
+  GameObject& findById(int _id);
+  std::vector<GameObject&> getListOfGameObjects();
+};
+
+#endif

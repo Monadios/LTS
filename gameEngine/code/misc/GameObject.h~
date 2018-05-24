@@ -15,8 +15,14 @@ public:
   GameObject(std::vector<Component*> cs);
 
   int id;
+  std::map<std::type_index, Component*> components;
 
   void addComponent(Component* c);
+  void update(){
+    for(const auto& pair : components ){
+      pair.second->update();
+    }
+  };
 
   template <typename T>
   T* get() {
@@ -27,9 +33,17 @@ public:
     return nullptr;
   }
 
+  void setOnReceive(std::function<void(GameObject*, Event*)> f) { onReceive = f; }
+
+  void receive(GameObject* obj, Event* e){
+    if(onReceive){
+      onReceive(obj, e);
+    }
+  }
+
 private:
   static int idCounter;
-  std::map<std::type_index, Component*> components;
+  std::function<void(GameObject*, Event*)> onReceive;
 };
 
 #endif

@@ -1,0 +1,15 @@
+#include "./Msg.h"
+
+
+class LocationMsg : public Msg
+{
+  LocationMsg(int _x, int _y) : x(_x), y(_y) {}
+  
+public:
+  int x, y;
+};
+
+int main()
+{
+  return 0;
+}

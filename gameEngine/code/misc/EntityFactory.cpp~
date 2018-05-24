@@ -1,0 +1,6 @@
+#include "../misc/EntityFactory.h"
+
+EntityFactory::EntityFactory()
+{
+  idCounter++;
+}

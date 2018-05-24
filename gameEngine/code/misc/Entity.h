@@ -1,25 +1,22 @@
-#ifndef GAME_OBJECT_H
-#define GAME_OBJECT_H
+#ifndef ENTITY_H
+#define ENTITY_H
 
 #include <map>
 #include <typeindex>
 #include <vector>
-#include <functional>
-#include "../Components/Component.h"
-#include "../Events/Event.h"
+#include "../components/Component.h"
 
-class GameObject
+class Entity
 {
-public:
-  GameObject();
-  GameObject(std::vector<Component*> cs);
+ public:
+ Entity(int _id) : id(_id) {}
 
   int id;
 
   void addComponent(Component* c);
 
   template <typename T>
-  T* get() {
+    T* get() {
     auto it = components.find(std::type_index(typeid(T)));
     if (it != components.end()){
       return dynamic_cast<T*>(it->second);
@@ -27,8 +24,7 @@ public:
     return nullptr;
   }
 
-private:
-  static int idCounter;
+ private:
   std::map<std::type_index, Component*> components;
 };
 
